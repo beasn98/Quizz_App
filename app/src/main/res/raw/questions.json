@@ -1,0 +1,77 @@
+[
+  {
+    "question": "What was the first video game created",
+    "choices": ["Tetris", "Pong", "Pacman", "Mr. Game & Watch"],
+    "answer": "Pong"
+  },
+  {
+    "question": "When was the Nintendo GameCube released in America?",
+    "choices": ["2000", "2001", "2003", "1999"],
+    "answer" : "2001"
+  },
+  {
+    "question": "Who is on the box art of Street Fighter 5?",
+    "choices": ["Ken", "Ryu", "Chun-Li", "Guile"],
+    "answer": "Ryu"
+  },
+  {
+    "question": "What is the most sold video game of all time?",
+    "choices": ["Kirby's Epic Yarn", "GTAV", "Minecraft", "Bioshock"],
+    "answer": "Minecraft"
+  },
+  {
+    "question": "What Company made Minecraft?",
+    "choices": ["Mojang", "Rovio", "Sega", "Nintendo"],
+    "answer": "Mojang"
+  },
+  {
+    "question": "Who is manager of Nintendo?",
+    "choices": ["Koji Kondo","Shigeru Miyamoto","Mashiro Sakurai","Reggie Fils - Aimé"],
+    "answer": "Shigeru Miyamoto"
+  },
+  {
+    "question": "Who created the Super Smash Bros. series?",
+    "choices": ["Masahiro Sakurai","ACE","MonolithSoft","Obama"],
+    "answer": "Masahiro Sakurai"
+  },
+  {
+    "question": "Who created the Kirby series?",
+    "choices": ["Masahiro Sakurai","Satoru Iwata","Shigeru Miyamoto","Bobby Kotick"],
+    "answer": "Masahiro Sakurai"
+  },
+  {
+    "question": "When was the original Mario Bros game released?",
+    "choices": ["1983","1990","1950","1987"],
+    "answer": "1983"
+  },
+  {
+    "question": "What was Nintendo's most successful console?",
+    "choices": ["GameCube","Wii","Switch","Gameboy"],
+    "answer": "Wii"
+  },
+  {
+    "question": "Who is the protagonist of Xenoblade Chronicles?",
+    "choices": ["Elma","Rex","Shulk","Steve"],
+    "answer": "Shulk"
+  },
+  {
+    "question": "How tall is Mario?",
+    "choices": ["5 feet 1 inch","5 feet 6 inches","5 feet 8 inches","7 feet 3 inches"],
+    "answer": "5 feet 1 inch"
+  },
+  {
+    "question": "How many mainline Ace Attorney games have been made?",
+    "choices": ["3","8","6","1"],
+    "answer": "6"
+  },
+  {
+    "question": "What is the world record for any% in the original mario bros?",
+    "choices": ["4:54","6:34","2:19","4:30"],
+    "answer": "4:54"
+  },
+  {
+    "question": "How many mainline Touhou games are there?",
+    "choices": ["24","17","19","8"],
+    "answer": "19"
+  }
+]
