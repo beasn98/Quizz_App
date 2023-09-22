@@ -4,13 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var buttonLeft: Button
-    lateinit var buttonRight: Button
+    lateinit var button1: Button
+    lateinit var button2: Button
+    lateinit var button3: Button
+    lateinit var button4: Button
+    lateinit var inquiry: TextView
     lateinit var quiz: Quiz
 
 
@@ -26,12 +30,84 @@ class MainActivity : AppCompatActivity() {
 
         loadQuestions()
 
+        updateQuestion()
+
+        updateAllButtons()
+
+
+
+
+
+
+        button1.setOnClickListener {
+            if (!quiz.isEnd()) {
+                quiz.isRight(button1.text.toString())
+            }
+            else {
+                quiz.updateNum()
+            }
+            updateAllButtons()
+            updateQuestion()
+        }
+        button2.setOnClickListener {
+            if (!quiz.isEnd()) {
+                quiz.isRight(button2.text.toString())
+            }
+            else {
+                quiz.updateNum()
+            }
+            updateAllButtons()
+            updateQuestion()
+        }
+        button3.setOnClickListener {
+            if (!quiz.isEnd()) {
+                quiz.isRight(button3.text.toString())
+            }
+            else {
+                quiz.updateNum()
+            }
+            updateAllButtons()
+            updateQuestion()
+        }
+        button4.setOnClickListener {
+            if (!quiz.isEnd()) {
+                quiz.isRight(button4.text.toString())
+            }
+            else {
+                quiz.updateNum()
+            }
+            updateAllButtons()
+            updateQuestion()
+        }
+
 
     }
 
+    private fun updateQuestion() {
+        inquiry.text = quiz.getQuestion()
+    }
+
+    private fun updateAllButtons() {
+        for (i in 0..3) {
+            updateButton(i)
+        }
+    }
+
+    private fun updateButton(a: Int) {
+        when (a) {
+            0 -> button1.text = quiz.getChoice(a)
+            1 -> button2.text = quiz.getChoice(a)
+            2 -> button3.text = quiz.getChoice(a)
+            3 -> button4.text = quiz.getChoice(a)
+        }
+    }
+
     private fun wireWidgets() {
-        buttonLeft = findViewById(R.id.button_main_false)
-        buttonRight = findViewById(R.id.button_main_true)
+        button1 = findViewById(R.id.button_main_one)
+        button2 = findViewById(R.id.button_main_two)
+        button3 = findViewById(R.id.button_main_three)
+        button4 = findViewById(R.id.button_main_four)
+        inquiry = findViewById(R.id.textView_main_question)
     }
 
     private fun loadQuestions() {
@@ -46,9 +122,10 @@ class MainActivity : AppCompatActivity() {
             object : TypeToken<List<Question>>() {}.type // data type of the list, questions.
         val questions = gson.fromJson<List<Question>>(jsonString, qType)
 
+        Log.d(TAG, "loadQuestions: $questions")
+
         quiz = Quiz(questions)
 
-        //Log.d(TAG, "loadQuestions: $questions")
 
 
         //next steps:

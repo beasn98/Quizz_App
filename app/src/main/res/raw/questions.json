@@ -1,6 +1,6 @@
 [
   {
-    "question": "What was the first video game created",
+    "question": "What was the first video game created?",
     "choices": ["Tetris", "Pong", "Pacman", "Mr. Game & Watch"],
     "answer": "Pong"
   },

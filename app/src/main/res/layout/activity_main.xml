@@ -10,54 +10,62 @@
         android:id="@+id/textView_main_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="356dp"
+        android:gravity="center"
         android:text="Hello World!"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_one"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/button_main_false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="False"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button_main_true"
+        android:id="@+id/button_main_one"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:text="One"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_three"
+        app:layout_constraintEnd_toStartOf="@+id/button_main_two"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_main_question" />
 
     <Button
-        android:id="@+id/button_main_true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="True"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:id="@+id/button_main_two"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:text="Two"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_four"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_main_false"
+        app:layout_constraintStart_toEndOf="@+id/button_main_one"
         app:layout_constraintTop_toBottomOf="@+id/textView_main_question" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/button_main_four"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:text="Four"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_main_true"
-        tools:layout_editor_absoluteX="247dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_main_three"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_two" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/button_main_three"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:text="Three"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_main_false"
-        tools:layout_editor_absoluteX="78dp" />
+        app:layout_constraintEnd_toStartOf="@+id/button_main_four"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_one" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
