@@ -123,7 +123,6 @@ class MainActivity : AppCompatActivity() {
         end.visibility = View.VISIBLE
         gameOver.text = "Game Over"
         score.text = "Score: " + quiz.getScore().toString()
-
     }
 
     private fun wireWidgets() {
