@@ -30,7 +30,8 @@
         app:layout_constraintEnd_toStartOf="@+id/button_main_two"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_main_question" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_main_question"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/button_main_two"
@@ -42,7 +43,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_main_one"
-        app:layout_constraintTop_toBottomOf="@+id/textView_main_question" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_main_question"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/button_main_four"
@@ -54,7 +56,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_main_three"
-        app:layout_constraintTop_toBottomOf="@+id/button_main_two" />
+        app:layout_constraintTop_toBottomOf="@+id/button_main_two"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/button_main_three"
@@ -66,6 +69,45 @@
         app:layout_constraintEnd_toStartOf="@+id/button_main_four"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_main_one" />
+        app:layout_constraintTop_toBottomOf="@+id/button_main_one"
+        tools:visibility="gone" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_main_quizUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textView_main_question,button_main_one,button_main_two,button_main_four,button_main_three" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_main_endText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textView_main_score,textView_main_gameOver" />
+
+    <TextView
+        android:id="@+id/textView_main_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_main_gameOver" />
+
+    <TextView
+        android:id="@+id/textView_main_gameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

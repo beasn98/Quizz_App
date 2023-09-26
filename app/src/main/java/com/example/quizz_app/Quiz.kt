@@ -1,5 +1,7 @@
 package com.example.quizz_app
 
+import android.util.Log
+
 class Quiz(val questions: List<Question>) {
     private var score = 0
     private var qNum = 0;
@@ -14,10 +16,8 @@ class Quiz(val questions: List<Question>) {
     }
 
     fun isRight(choice: String): Boolean {
-
         if (questions[qNum].answer == choice) {
             score++
-            qNum++
             return true
         }
         return false
@@ -31,6 +31,9 @@ class Quiz(val questions: List<Question>) {
         qNum++
     }
 
+    fun getScore(): Int {
+        return score
+    }
 
 
     //functions

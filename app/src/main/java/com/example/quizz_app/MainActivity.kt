@@ -3,8 +3,10 @@ package com.example.quizz_app
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.constraintlayout.widget.Group
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -16,6 +18,12 @@ class MainActivity : AppCompatActivity() {
     lateinit var button4: Button
     lateinit var inquiry: TextView
     lateinit var quiz: Quiz
+    lateinit var buttons: Group
+
+    lateinit var gameOver: TextView
+    lateinit var score: TextView
+    lateinit var end: Group
+
 
 
     companion object {
@@ -28,6 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         wireWidgets()
 
+        end.visibility = View.GONE
+
         loadQuestions()
 
         updateQuestion()
@@ -37,50 +47,56 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
         button1.setOnClickListener {
             if (!quiz.isEnd()) {
                 quiz.isRight(button1.text.toString())
+            } else {
+                //end of quiz
+                gameOver()
             }
-            else {
-                quiz.updateNum()
-            }
+            quiz.updateNum()
+
             updateAllButtons()
             updateQuestion()
+
         }
+
         button2.setOnClickListener {
             if (!quiz.isEnd()) {
                 quiz.isRight(button2.text.toString())
+                Log.d(TAG, "check isRight: ${button2.text}")
+            } else {
+                gameOver()
             }
-            else {
-                quiz.updateNum()
-            }
+            quiz.updateNum()
+
             updateAllButtons()
             updateQuestion()
         }
+
         button3.setOnClickListener {
             if (!quiz.isEnd()) {
                 quiz.isRight(button3.text.toString())
+            } else {
+                gameOver()
             }
-            else {
-                quiz.updateNum()
-            }
+            quiz.updateNum()
+
             updateAllButtons()
             updateQuestion()
         }
+
         button4.setOnClickListener {
             if (!quiz.isEnd()) {
                 quiz.isRight(button4.text.toString())
+            } else {
+                gameOver()
             }
-            else {
-                quiz.updateNum()
-            }
+            quiz.updateNum()
+
             updateAllButtons()
             updateQuestion()
         }
-
-
     }
 
     private fun updateQuestion() {
@@ -102,12 +118,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun gameOver() {
+        buttons.visibility = View.GONE
+        end.visibility = View.VISIBLE
+        gameOver.text = "Game Over"
+        score.text = "Score: " + quiz.getScore().toString()
+
+    }
+
     private fun wireWidgets() {
         button1 = findViewById(R.id.button_main_one)
         button2 = findViewById(R.id.button_main_two)
         button3 = findViewById(R.id.button_main_three)
         button4 = findViewById(R.id.button_main_four)
         inquiry = findViewById(R.id.textView_main_question)
+        buttons = findViewById(R.id.group_main_quizUI)
+        end = findViewById(R.id.group_main_endText)
+        gameOver = findViewById(R.id.textView_main_gameOver)
+        score = findViewById(R.id.textView_main_score)
     }
 
     private fun loadQuestions() {
@@ -123,9 +151,9 @@ class MainActivity : AppCompatActivity() {
         val questions = gson.fromJson<List<Question>>(jsonString, qType)
 
         Log.d(TAG, "loadQuestions: $questions")
+        Log.d(TAG, "loadQuestions: ${questions.size}")
 
         quiz = Quiz(questions)
-
 
 
         //next steps:
