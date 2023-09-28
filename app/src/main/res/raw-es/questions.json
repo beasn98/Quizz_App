@@ -1,0 +1,78 @@
+[
+  {
+    "question": "¿Cuál fue el primer videojuego creado?",
+    "choices": ["Tetris", "Pong", "Pacman", "Mr. Game & Watch"],
+    "answer": "Pong"
+  },
+  {
+    "question": "¿Cuándo se lanzó Nintendo GameCube en Estados Unidos?",
+    "choices": ["2000", "2001", "2003", "1999"],
+    "answer": "2001"
+  },
+  {
+    "question": "¿Quién aparece en la carátula de Street Fighter 5?",
+    "choices": ["Ken", "Ryu", "Chun-Li", "Guile"],
+    "answer": "Ryu"
+  },
+  {
+    "question": "¿Cuál es el videojuego más vendido de todos los tiempos?",
+    "choices": ["El hilo épico de Kirby", "GTAV", "Minecraft", "Bioshock"],
+    "answer": "Minecraft"
+  },
+  {
+    "question": "¿Qué empresa creó Minecraft?",
+    "choices": ["Mojang", "Rovio", "Sega", "Nintendo"],
+    "answer": "Mojang"
+  },
+  {
+    "question": "¿Quién es el gerente de Nintendo?",
+    "choices": ["Koji Kondo","Shigeru Miyamoto","Mashiro Sakurai","Reggie Fils - Aimé"],
+    "answer": "Shigeru Miyamoto"
+  },
+  {
+    "question": "¿Quién creó la serie Super Smash Bros.?",
+    "choices": ["Masahiro Sakurai","ACE","MonolithSoft","Obama"],
+    "answer": "Masahiro Sakurai"
+  },
+  {
+    "question": "¿Quién creó la serie Kirby?",
+    "choices": ["Masahiro Sakurai","Satoru Iwata","Shigeru Miyamoto","Bobby Kotick"],
+    "answer": "Masahiro Sakurai"
+  },
+  {
+    "question": "¿Cuándo se lanzó el juego original de Mario Bros?",
+    "choices": ["1983","1990","1950","1987"],
+    "answer": "1983"
+  },
+  {
+    "question": "¿Cuál fue la consola más exitosa de Nintendo?",
+    "choices": ["GameCube","Wii","Switch","Gameboy"],
+    "answer": "Wii"
+  },
+  {
+    "question": "¿Quién es el protagonista de Xenoblade Chronicles?",
+    "choices": ["Elma","Rex","Shulk","Steve"],
+    "answer": "Shulk"
+  },
+  {
+    "question": "¿Qué altura tiene Mario?",
+    "choices": ["5 pies 1 pulgada","5 pies 6 pulgadas","5 pies 8 pulgadas","7 pies 3 pulgadas"],
+    "answer": "5 pies 1 pulgada"
+  },
+  {
+    "question": "¿Cuántos juegos principales de Ace Attorney se han creado?",
+    "choices": ["3","8","6","1"],
+    "answer": "6"
+  },
+  {
+    "question": "¿Cuál es el récord mundial de cualquier% en el mario bros original?",
+    "choices": ["4:54","6:34","2:19","4:30"],
+    "answer": "4:54"
+  },
+  {
+    "question": "¿Cuántos juegos principales de Touhou hay?",
+    "choices": ["24","17","19","8"],
+    "answer": "19"
+  }
+]
+

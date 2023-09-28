@@ -7,8 +7,8 @@ class Quiz(val questions: List<Question>) {
     private var qNum = 0;
     //var to track: score, question number
 
-    fun isEnd(): Boolean {
-        return qNum == questions.size-1
+    fun notEnd(): Boolean {
+        return qNum < questions.size - 1
     }
 
     fun getChoice(num: Int): String {

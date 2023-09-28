@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var button2: Button
     lateinit var button3: Button
     lateinit var button4: Button
-    lateinit var inquiry: TextView
+    lateinit var inquiry: TextView //question at the top
     lateinit var quiz: Quiz
-    lateinit var buttons: Group
+    lateinit var buttons: Group //main Screen elements
 
     lateinit var gameOver: TextView
     lateinit var score: TextView
-    lateinit var end: Group
+    lateinit var end: Group // score and game over txt
 
 
 
@@ -48,55 +48,54 @@ class MainActivity : AppCompatActivity() {
 
 
         button1.setOnClickListener {
-            if (!quiz.isEnd()) {
+            if (quiz.notEnd()) {
                 quiz.isRight(button1.text.toString())
+                quiz.updateNum()
+                updateAllButtons()
+                updateQuestion()
             } else {
+                quiz.isRight(button1.text.toString())
                 //end of quiz
                 gameOver()
             }
-            quiz.updateNum()
-
-            updateAllButtons()
-            updateQuestion()
-
         }
 
         button2.setOnClickListener {
-            if (!quiz.isEnd()) {
+            if (quiz.notEnd()) {
                 quiz.isRight(button2.text.toString())
-                Log.d(TAG, "check isRight: ${button2.text}")
+                quiz.updateNum()
+                updateAllButtons()
+                updateQuestion()
             } else {
+                quiz.isRight(button2.text.toString())
                 gameOver()
             }
-            quiz.updateNum()
-
-            updateAllButtons()
-            updateQuestion()
         }
 
         button3.setOnClickListener {
-            if (!quiz.isEnd()) {
+            if (quiz.notEnd()) {
                 quiz.isRight(button3.text.toString())
+                quiz.updateNum()
+                updateAllButtons()
+                updateQuestion()
             } else {
+                quiz.isRight(button3.text.toString())
                 gameOver()
             }
-            quiz.updateNum()
-
-            updateAllButtons()
-            updateQuestion()
         }
 
         button4.setOnClickListener {
-            if (!quiz.isEnd()) {
+            if (quiz.notEnd()) {
                 quiz.isRight(button4.text.toString())
+                quiz.updateNum()
+                updateAllButtons()
+                updateQuestion()
             } else {
+                quiz.isRight(button4.text.toString())
                 gameOver()
             }
-            quiz.updateNum()
-
-            updateAllButtons()
-            updateQuestion()
         }
+
     }
 
     private fun updateQuestion() {
@@ -121,8 +120,8 @@ class MainActivity : AppCompatActivity() {
     private fun gameOver() {
         buttons.visibility = View.GONE
         end.visibility = View.VISIBLE
-        gameOver.text = "Game Over"
-        score.text = "Score: " + quiz.getScore().toString()
+        gameOver.text = resources.getString(R.string.gameover)
+        score.text = "${resources.getString(R.string.score)}: " + quiz.getScore().toString()
     }
 
     private fun wireWidgets() {
@@ -153,22 +152,6 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "loadQuestions: ${questions.size}")
 
         quiz = Quiz(questions)
-
-
-        //next steps:
-        // Make your question object
-        // Use this tutorial (on classroom)
-        // scroll down to "parsing between a Collection, List, or Array"
-        //convert your jsonString to a List<Question>
-        // Log that list of questions to see if it worked
-
-
-        //Create a Quiz object and pass in that list of questions as a param
-
-        //do the initial question and answer choices setup
-
-        //Set listeners to react to user input
-        //passing info to and from the Quiz object
     }
 
 }

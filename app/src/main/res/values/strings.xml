@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Quizz_App</string>
+    <string name="app_name" translatable="false">Quizz_App</string>
+    <string name="gameover">GameOver</string>
+    <string name="score">score</string>
 </resources>
